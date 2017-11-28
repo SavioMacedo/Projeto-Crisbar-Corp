@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore context-namespace="Persistencia" namespace="Entidade" p1:name="Model" p1:Guid="2dfb7bdb-e1ae-499d-8dc2-6e9cb0c5c586" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="Funcionario" entity-set="Funcionarios" table="Funcionario" p1:Guid="b00aa60b-bd2f-4150-9924-bf94cc9d2ad6">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="1a9af870-0c2a-4e68-bb16-9f9c7877db2a">
+      <column name="" />
+    </id>
+    <property name="Nome" type="String" p1:ValidateRequired="true" p1:Guid="efdce84b-83d7-4382-beac-0c1132b0e709">
+      <column name="" />
+    </property>
+    <property name="DataAdmissao" type="Date" p1:ValidateRequired="true" p1:Guid="1a08ac6b-3d19-48d9-aae1-79b83de621b4">
+      <column name="" />
+    </property>
+    <property name="CargoId" type="Int64" p1:ValidateRequired="true" p1:Guid="bfd9b398-a5ff-4b0f-a653-3b9e0f885195">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="Cargo" entity-set="Cargos" table="Cargo" p1:Guid="ae912476-e7bd-43bd-80d5-b20293066e3f">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="07b93f46-0c21-40d1-9b5c-d97fab72cd95">
+      <column name="" />
+    </id>
+    <property name="Descricao" type="String" p1:ValidateRequired="true" p1:Guid="3f59a5c5-af65-441e-98c9-bf8ec77711f1">
+      <column name="" />
+    </property>
+    <property name="NivelPrivilegio" type="Int16" p1:ValidateRequired="true" p1:Guid="f2163602-31fb-48e4-b3ac-0813e7f6fba6">
+      <column name="" />
+    </property>
+  </class>
+  <class name="Produto" entity-set="Produtos" table="Produto" p1:Guid="484ae83c-f982-43c4-aa7a-e133915dae55">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="5ada48d5-7d7e-44b8-9cfc-a0b0b0959f38">
+      <column name="" />
+    </id>
+    <property name="Descricao" type="String" p1:ValidateRequired="true" p1:Guid="857ea273-1077-482d-84fd-0cb7a8476869">
+      <column name="" />
+    </property>
+    <property name="Preco" type="Double" p1:ValidateRequired="true" p1:Guid="3b5866f5-6b1d-47ca-878f-c6468c5faae8">
+      <column name="" />
+    </property>
+    <property name="EstoqueId" type="Int64" p1:ValidateRequired="true" p1:Guid="7807dde0-24e6-425a-9bc5-2f09dc023994">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="Estoque" entity-set="Estoques" table="Estoque" p1:Guid="c51c1822-9cd0-4412-8aee-77149c16a5a4">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="b98e88b7-1902-4bb6-94d2-e3effcf14b92">
+      <column name="" />
+    </id>
+    <property name="Quantidade" type="Int64" p1:ValidateRequired="true" p1:Guid="de6465e1-b9f8-4f72-b0e1-3fea84778724">
+      <column name="" />
+    </property>
+    <property name="MedidaId" type="Int64" p1:ValidateRequired="true" p1:Guid="a908d2c4-7829-4f9a-8eec-4a38ad707ec8">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="Medida" entity-set="Medidas" table="Medida" p1:Guid="6046c9c6-cc85-4b17-afd9-4739a8faeafd">
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="1a766c2a-1f85-4845-bfc2-f95822db2d8d">
+      <column name="" />
+    </id>
+    <property name="Nome" type="String" p1:ValidateRequired="true" p1:Guid="6bc2e14b-2f47-4880-b16c-e1c9fc3789c7">
+      <column name="" />
+    </property>
+  </class>
+  <associations>
+    <association name="Cargo_Funcionario" cardinality="OneToMany" p1:Guid="c06e5223-9008-4d97-abe4-196f11cadefa">
+      <end1 multiplicity="One" name="Cargo" class="Funcionario" relation-class="Cargo" constrained="True" p1:Guid="3e737eb9-c032-4635-92e8-5b7f10f4d294">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Funcionarios" class="Cargo" relation-class="Funcionario" p1:Guid="afb5a12e-f55b-4b5d-8a9e-5ec7856b0425">
+        <property name="CargoId" />
+      </end2>
+    </association>
+    <association name="Estoque_Produto" cardinality="OneToMany" p1:Guid="08c47f92-5dd6-42e8-b7eb-13980341927a">
+      <end1 multiplicity="One" name="Estoque" class="Produto" relation-class="Estoque" constrained="True" p1:Guid="d41c6fb3-c1cd-4db1-af5d-ec236ead6b99">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Produtos" class="Estoque" relation-class="Produto" p1:Guid="fce407d4-cfc6-41b2-8ab4-6d0d97a9da62">
+        <property name="EstoqueId" />
+      </end2>
+    </association>
+    <association name="Medida_Estoque" cardinality="OneToMany" p1:Guid="0083b678-9355-47f0-aa04-60bc21b0c3c0">
+      <end1 multiplicity="One" name="Medida" class="Estoque" relation-class="Medida" constrained="True" p1:Guid="86e151cd-c85b-463d-9298-9068bbaefda3">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Estoques" class="Medida" relation-class="Estoque" p1:Guid="0e255793-51b4-4d35-842d-68d18e4b30e6">
+        <property name="MedidaId" />
+      </end2>
+    </association>
+  </associations>
+</efcore>

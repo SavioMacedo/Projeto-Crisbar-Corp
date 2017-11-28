@@ -1,0 +1,12 @@
+C:\Users\savio\source\repos\Projeto\Projeto\bin\Debug\netcoreapp2.0\Projeto.deps.json
+C:\Users\savio\source\repos\Projeto\Projeto\bin\Debug\netcoreapp2.0\Projeto.runtimeconfig.json
+C:\Users\savio\source\repos\Projeto\Projeto\bin\Debug\netcoreapp2.0\Projeto.runtimeconfig.dev.json
+C:\Users\savio\source\repos\Projeto\Projeto\bin\Debug\netcoreapp2.0\Projeto.dll
+C:\Users\savio\source\repos\Projeto\Projeto\obj\Debug\netcoreapp2.0\Projeto.csprojResolveAssemblyReference.cache
+C:\Users\savio\source\repos\Projeto\Projeto\obj\Debug\netcoreapp2.0\Projeto.csproj.CoreCompileInputs.cache
+C:\Users\savio\source\repos\Projeto\Projeto\obj\Debug\netcoreapp2.0\Projeto.AssemblyInfoInputs.cache
+C:\Users\savio\source\repos\Projeto\Projeto\obj\Debug\netcoreapp2.0\Projeto.AssemblyInfo.cs
+C:\Users\savio\source\repos\Projeto\Projeto\bin\Debug\netcoreapp2.0\Projeto.pdb
+C:\Users\savio\source\repos\Projeto\Projeto\obj\Debug\netcoreapp2.0\Projeto.dll
+C:\Users\savio\source\repos\Projeto\Projeto\obj\Debug\netcoreapp2.0\Projeto.pdb
+C:\Users\savio\source\repos\Projeto\Projeto\bin\Debug\netcoreapp2.0\appsettings.json
